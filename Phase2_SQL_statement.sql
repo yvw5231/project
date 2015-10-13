@@ -34,13 +34,8 @@ CREATE TABlE Credit_Card(
 	Name CHAR(50),
 	Expir_date DATE,
 	CVV int,
-	PRIMARY KEY (Card_num)
-);
-
-CREATE TABlE Card_brand(
-	Card_num int NOT NULL,
 	Card_brand CHAR(50),
-	PRIMARY KEY (Card_num);
+	PRIMARY KEY (Card_num)
 );
 
 CREATE TABlE Address(
@@ -90,7 +85,6 @@ CREATE TABlE Item(
 	Supplier_id int,
 	Price int,
 	Description CHAR(140),
-	Item_type CHAR(30),
 	Quantity int,
 	Combine_id int,
 	PRIMARY KEY(Item_id),
@@ -99,11 +93,18 @@ CREATE TABlE Item(
 	FOREIGN key (Category_id) REFERENCE Category (Category_id)
 );
 
+CREATE TABlE Item_type(
+	Category_id int,
+	Item_type CHAR(30),
+	PRIMARY KEY(Category_id),
+	FOREIGN KEY(Category_id) REFERENCE Item (Category_id)
+);
 
 CREATE TABlE Property(
 	Item_id int,
 	Quantity int,
 	Date_purchased DATE，
+	PRIMARY KEY (Item_id),
 	FOREIGN KEY (Item_id) REFERENCE Item (Item_id)
 );
 
