@@ -1,0 +1,29 @@
+{
+  "name": "league",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yvw5231/project",
+  "authors": [
+    "Berty Ruan",
+    "Yusheng Wang",
+    "Jiayi Liang",
+    "Shaohua Wang",
+    "Naiqiang Lin"
+  ],
+  "description": "FALL 2015 CMPSC431W project",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.7"
+  }
+}
