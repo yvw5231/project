@@ -28,7 +28,7 @@ CREATE TABLE Address(
 	Street CHAR(50),
 	Apt_num int,
 	Zip CHAR(5),
-	Permanet_addr BOOLEAN,
+	Permanent_addr BOOLEAN,
 	PRIMARY KEY (Id),
 	FOREIGN KEY (Zip) REFERENCES Zip (Zip_id)
 );
@@ -101,10 +101,8 @@ CREATE TABLE Rating_user(
 	Rating_id int NOT NULL AUTO_INCREMENT,
 	Comment CHAR(140),
 	Star_rank int,
-	Supplier_id int,
 	Item_id int,
 	PRIMARY KEY (Rating_id),
-	FOREIGN KEY (Supplier_id) REFERENCES Supplier(Supplier_id),
 	FOREIGN KEY (Item_id) REFERENCES Item (Item_id)
 );
 
