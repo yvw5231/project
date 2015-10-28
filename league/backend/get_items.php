@@ -4,19 +4,19 @@
 
 	function GetItems() 
 	{
-		$ItemsArray = GetItemsAPI($_GET['name'], $_GET['type']);
+		$databaseConnection = GetDatabaseConnection();
+		$itemsArray = array();
 
-		$ItemsArrayJSON = json_encode($ItemsArray);
+		$getItems = 'SELECT * FROM `User`';
+		$itemsResult = $databaseConnection->query($getItems);
 
-		echo $ItemsArrayJSON;
+		while($itemsRow = $itemsResult->fetch_assoc())
+   		{
+           array_push($itemsArray, $itemsRow);
+    	}
+
+		return json_encode($itemsArray);
 	}
 
-	function GetItemsAPI($item, $type) 
-	{
-		//write sql commands here
-		return array( "foo" => "a", "bar" => "n",);
-	}
-
-	//GetItems();
-	echo json_encode(array( "foo" => "a", "bar" => "n",));
+	echo GetItems();
 ?>
