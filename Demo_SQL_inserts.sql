@@ -35,12 +35,30 @@ INSERT INTO Supplier (Id, Company_name, Company_category, Revenue, Routing_num, 
 (5, 'Lol World', 'league', 16546520, 58962, 2),
 (6, 'King Lol', 'league', 845616132, 486525, 2);
 
-
 INSERT INTO Category (Category_name, Super_category) VALUES
-("root", ),
-("in-game items", 1),
-("virtual", 2),
-("physical", 2),
+("root", null),
+("virtual", 1),
+("physical", 1),
+("weapon", 2),
+("armor", 2),
+("shoes", 2),
+("skin", 2),
+("wards", 2),
+("garagekits", 3),
+("clothes", 3),
+("shoes", 3),
+("AD", 4),
+("AP", 4),
+("AD", 5),
+("AP", 5),
+("heroes", 9),
+("parts", 9),
+("top",10),
+("bottom",10),
+("weapon",17),
+("armor",17),
+("shoes",17),
+("wards",17);
 
 
 
