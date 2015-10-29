@@ -81,7 +81,7 @@
 		$insertquery = "INSERT INTO Address (Street, Apt_num, Zip, Permanent_addr) VALUES
 						(? , ? , ? , ?);";
 		$stmt = mysqli_prepare($connection, $insertquery);
-		mysqli_stmt_bind_param($stmt, $Street, $Apt_num, $Zip, $Permanent_addr);
+		mysqli_stmt_bind_param($stmt, 'ssss', $Street, $Apt_num, $Zip, $Permanent_addr);
 		//$stmt->bind_param('$Street', $Apt_num, '$Zip', $Permanent_addr);
 		// $stmt->bind_param(1, $Street);
 		// $stmt->bindParam(2, $Apt_num);
@@ -123,17 +123,7 @@
 		mysqli_stmt_execute($stmt);
 	?> 
 
-	<ul>
- 		<?php
-			// 3. Use returned data (if any)
-			while($row = mysqli_fetch_assoc($result)) {
-				// output data from each row
-		?>
-		<li><?php echo $row["Id"]."---".$row["Street"]."---".$row["Apt_num"]."---".$row["Zip"]."---".$row["Permanent_addr"]; ?></li>
-		<?php		
-			}
-		?>
-	</ul>
+
 		<?php
 		  // 4. Release returned data
 		  mysqli_free_result($result);

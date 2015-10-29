@@ -15,7 +15,7 @@
 ?>
 
 <?php
-	$query = "SELECT * FROM Address";
+	$query = "SELECT * FROM Item";
 	$result = mysqli_query($connection, $query);
 	if(!$result){
 		die("database failed");
@@ -25,22 +25,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Address</title>
+  <title>Items</title>
   <link href="home.css" rel="stylesheet">
 </head>
 
 <body>
 
 <div id="main">
-<h1>Address</h1>
+<h1>Items</h1>
 
 <table>
 	<tr>
 	  <th>Id</th>
-	  <th>Street</th>
-	  <th>Apt_num</th>
-	  <th>Zip</th>
-	  <th>Permanent_addr</th>
+	  <th>Item_name</th>
+	  <th>Category_id</th>
+	  <th>Supplier_id</th>
+	  <th>Price</th>
+	  <th>Description</th>
+	  <th>Combine_id1</th>
+	  <th>Combine_id2</th>
+	  <th>Combine_id3</th>
 	</tr>
 	<?php
 		while ($subject = mysqli_fetch_assoc($result)) {
@@ -48,10 +52,13 @@
 
 	 <tr>
 		<td><?php echo $subject["Id"]; ?></td>
-		<td><?php echo $subject["Street"]; ?></td>
-		<td><?php echo $subject["Apt_num"]; ?></td>
-		<td><?php echo $subject["Zip"]; ?></td>
-		<td><?php echo $subject["Permanent_addr"]; ?></td>
+		<td><?php echo $subject["Item_name"]; ?></td>
+		<td><?php echo $subject["Category_id"]; ?></td>
+		<td><?php echo $subject["Supplier_id"]; ?></td>
+		<td><?php echo $subject["Price"]; ?></td>
+		<td><?php echo $subject["Combine_id1"]; ?></td>
+		<td><?php echo $subject["Combine_id2"]; ?></td>
+		<td><?php echo $subject["Combine_id3"]; ?></td>
 	</tr> 
 
 	<?php

@@ -15,7 +15,7 @@
 ?>
 
 <?php
-	$query = "SELECT * FROM Address";
+	$query = "SELECT * FROM Category";
 	$result = mysqli_query($connection, $query);
 	if(!$result){
 		die("database failed");
@@ -25,33 +25,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Address</title>
+  <title>Category</title>
   <link href="home.css" rel="stylesheet">
 </head>
 
 <body>
 
 <div id="main">
-<h1>Address</h1>
+<h1>Category</h1>
 
 <table>
 	<tr>
-	  <th>Id</th>
-	  <th>Street</th>
-	  <th>Apt_num</th>
-	  <th>Zip</th>
-	  <th>Permanent_addr</th>
+	  <th>Category_id</th>
+	  <th>Category_name</th>
+	  <th>Super_category</th>
 	</tr>
 	<?php
 		while ($subject = mysqli_fetch_assoc($result)) {
 	?>
 
 	 <tr>
-		<td><?php echo $subject["Id"]; ?></td>
-		<td><?php echo $subject["Street"]; ?></td>
-		<td><?php echo $subject["Apt_num"]; ?></td>
-		<td><?php echo $subject["Zip"]; ?></td>
-		<td><?php echo $subject["Permanent_addr"]; ?></td>
+		<td><?php echo $subject["Category_id"]; ?></td>
+		<td><?php echo $subject["Category_name"]; ?></td>
+		<td><?php echo $subject["Super_category"]; ?></td>
 	</tr> 
 
 	<?php
