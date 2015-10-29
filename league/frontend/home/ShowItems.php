@@ -36,7 +36,6 @@
 
 <table>
 	<tr>
-	  <th>Id</th>
 	  <th>Item_name</th>
 	  <th>Category_id</th>
 	  <th>Supplier_id</th>
@@ -51,11 +50,11 @@
 	?>
 
 	 <tr>
-		<td><?php echo $subject["Id"]; ?></td>
 		<td><?php echo $subject["Item_name"]; ?></td>
 		<td><?php echo $subject["Category_id"]; ?></td>
 		<td><?php echo $subject["Supplier_id"]; ?></td>
 		<td><?php echo $subject["Price"]; ?></td>
+		<td><?php echo $subject["Description"] ?></td>
 		<td><?php echo $subject["Combine_id1"]; ?></td>
 		<td><?php echo $subject["Combine_id2"]; ?></td>
 		<td><?php echo $subject["Combine_id3"]; ?></td>
