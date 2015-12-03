@@ -64,7 +64,7 @@ INSERT INTO Category (Category_name, Super_category) VALUES
 
 INSERT INTO Item (Item_name, Category_id, Supplier_id, Price, Description, Image, Combine_id1, Combine_id2, Combine_id3) VALUES
 ("B.F Sword", 12, 2, 12, "A very good League Item number 1", "BFSWord.jpg", null, null, null),
-("Cloak of Agility", 14, 3, 7, "A very good League Item number 2", "CloakOfAgility.jpg" null, null, null),
+("Cloak of Agility", 14, 3, 7, "A very good League Item number 2", "CloakOfAgility.jpg", null, null, null),
 ("Pickaxe", 12, 1, 8, "A very good League Item number 3", "Pickaxe.jpg", null, null, null),
 ("Ruby Crystal", 14, 1, 3, "A very good League Item number 4", "RubyCrystal.jpg", null, null, null),
 ("Sapphire Crystal", 15, 1, 3, "A very good League Item number 5", "SapphireCrystal.jpg", null, null, null),
