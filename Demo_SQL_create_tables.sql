@@ -86,7 +86,7 @@ CREATE TABLE Item(
 	Price int,
 	Description CHAR(140),
 	Quantity int,
-	Image string,
+	Image CHAR(50),
 	Combine_id1 int,
 	Combine_id2 int,
 	Combine_id3 int,
