@@ -1,0 +1,59 @@
+<?php
+	include('session.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Bootstrap</title>
+</head>
+<body>
+ 	<?php
+		$user_sql=mysql_query("select * from user where username='$login_session'", $connection);
+		$result = mysql_fetch_assoc($user_sql);
+	?>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">Project X</a>
+			</div>
+			<ul class="nav navbar-nav">
+			    <li><a href="../index.html">Home</a></li>
+			    <li><a href="#">Mission</a></li>
+			    <li><a href="#">Services</a></li>
+			    <li><a href="#">Staff</a></li>
+			    <li><a href="#">Testimonials</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="profile">
+	<b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
+	
+	<div class="content container">
+	    <h2>Our Items</h2>
+	    <div class="row">
+	        <section class="col-md-4">
+				<img class="icon" src="../images/B_F_Sword.png" alt="Icon">
+	        </section>
+				
+	        <section class="col-md-4">
+		        <h2><?php echo $result['Username']; ?></h2>
+		        <p><?php echo $result['Phone_num']; ?></p>
+	        </section>
+	    </div><!-- row -->
+	</div><!-- content container -->
+
+
+	<b id="logout"><a href="logout.php">Log Out</a></b>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
