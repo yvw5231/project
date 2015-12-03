@@ -39,7 +39,7 @@
 	  <th>Id</th>
 	  <th>Street</th>
 	  <th>Apt_num</th>
-	 <th>Zip</th>
+	  <th>Zip</th>
 	  <th>Permanent_addr</th>
 	</tr>
 	<?php
