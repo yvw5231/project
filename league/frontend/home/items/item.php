@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!$_GET){
+	die("PAGE Not Found");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,36 +17,33 @@ session_start();
 </head>
 <body>
 
-<?php include("nav.html"); ?>
-
-<div class="content container">
-    <h2>Recommended Items</h2>
-    <div class="row">
 <?php
-	include('dbsetup.php');
-	$query = "SELECT * FROM Item limit 10";
+	include('./../nav.html');
+	include('./../dbsetup.php');
+	$itemid = (int) $_GET['itemid'];
+	$query = "SELECT * FROM Item WHERE Item_id=$itemid";
 	$result = mysqli_query($connection, $query);
 	if(!$result){
-		die("database failed");
+		die("Not Found");
 	}
-	while ($subject = mysqli_fetch_assoc($result)) {
+	$subject = mysqli_fetch_assoc($result);
 ?>
+<div class="content container" width="100%" height="100%" >
+    <h2> <?php echo $subject['Item_name']; ?> </h2>
+    <div class="row" >
+
         <section class="col-md-4">
-	<img class="icon" src="images/<?php echo $subject['Image']; ?>" alt="Icon" width="200" height="210">
-	<h3>
-		<a href="./items/item.php?itemid=<?php echo $subject['Item_id']; ?>">
-			<?php echo $subject['Item_name']; ?>
-		</a>
-	</h3>
+	<img class="icon" src="./../images/<?php echo $subject['Image']; ?>" alt="Icon" width="300" height="315">
+	<p><b>Description: </b> <?php echo $subject['Description']; ?> </p>
 	<p>Price: $ <?php echo $subject['Price']; ?> </p>
         </section>
-<?php
-}
-?>
+	<section class="col-md-4">
+		<input type="button" name="addItem" value="Add to Card"/>
+	</section>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
 </body>
 </html>

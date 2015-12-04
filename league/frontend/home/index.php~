@@ -41,13 +41,13 @@ session_start();
 	while ($subject = mysqli_fetch_assoc($result)) {
 ?>
         <section class="col-md-4">
-	<img class="icon" src="images/<?php echo $subject['Image']; ?>" alt="Icon">
+	<img class="icon" src="images/<?php echo $subject['Image']; ?>" alt="Icon" width="200" height="210">
 	<h3>
-		<a href="./item.php?itemid=<?php echo $subject['Item_id']; ?>">
+		<a href="./items/item.php?itemid=<?php echo $subject['Item_id']; ?>">
 			<?php echo $subject['Item_name']; ?>
 		</a>
 	</h3>
-	<p>Price: $<?php echo $subject['Price']; ?> </p>
+	<p>Price: $ <?php echo $subject['Price']; ?> </p>
         </section>
 <?php
 }
