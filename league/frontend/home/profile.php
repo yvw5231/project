@@ -1,4 +1,3 @@
-@@ -0,0 +1,59 @@
 <?php
 	include('session.php');
 ?>
@@ -17,21 +16,9 @@
  	<?php
 		$user_sql=mysql_query("select * from user where username='$login_session'", $connection);
 		$result = mysql_fetch_assoc($user_sql);
+		include("./nav.html");
 	?>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand">Project X</a>
-			</div>
-			<ul class="nav navbar-nav">
-			    <li><a href="../index.html">Home</a></li>
-			    <li><a href="#">Mission</a></li>
-			    <li><a href="#">Services</a></li>
-			    <li><a href="#">Staff</a></li>
-			    <li><a href="#">Testimonials</a></li>
-			</ul>
-		</div>
-	</nav>
+
 
 	<div id="profile">
 	<b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
@@ -40,7 +27,7 @@
 	    <h2>Our Items</h2>
 	    <div class="row">
 	        <section class="col-md-4">
-				<img class="icon" src="../images/B_F_Sword.png" alt="Icon">
+				<img class="icon" src="./images/" alt="Icon">
 	        </section>
 				
 	        <section class="col-md-4">

@@ -23,6 +23,7 @@ $db = mysql_select_db($dbname, $connection);
 // SQL query to fetch information of registerd users and finds user match.
 $query = mysql_query("select * from user where password='$password' AND username='$username'", $connection);
 $rows = mysql_num_rows($query);
+echo $rows;
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session
 header("location: profile.php"); // Redirecting To Other Page
