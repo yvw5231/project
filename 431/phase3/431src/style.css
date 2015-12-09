@@ -1,0 +1,65 @@
+@charset "utf-8";
+body{
+	margin: 0;
+}
+/*
+.h{
+	height: 55px;
+	background: #a00000;
+}
+
+.h ul{
+	margin: 0;
+	padding: 0;
+}
+
+.h ul li{
+	list-style: none;
+}
+
+.h ul li a{
+	text-decoration: none;
+	float: left;
+	display: block;
+	padding: 10px 30px;
+	color: black;
+	font-size: 35px;
+}
+
+.h ul li a:hover{
+	color: white;
+}
+*/
+.adminNavbar{
+	height: 60px;
+	background: #a00000;
+}
+
+.adminNavbar ul{
+	margin: 0;
+	padding: 0;
+}
+
+.adminNavbar ul li{
+	list-style: none;
+}
+
+.adminNavbar ul li a{
+	text-decoration: none;
+	float: left;
+	display: block;
+	padding: 15px 15px;
+	color: black;
+	font-size: 30px;
+}
+
+.adminNavbar ul li a:hover{
+	color: white;
+}
+.left{
+	text-align: left;
+}
+
+.right{
+	text-align: right;
+}

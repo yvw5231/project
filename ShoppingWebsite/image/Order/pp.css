@@ -1,0 +1,39 @@
+#banner {
+  margin: 0px;
+  width: 100%;
+  padding: 0px;   
+  background-color: #EFF5F9;
+}
+
+.discountline {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 13px;  
+}
+
+.discountlinered {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #A13029;
+}
+
+.discountlinebold {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-weight: bold; 
+  font-size: 13px;
+}
+  
+.plcc_headline { 
+  margin:5px 5px 5px 10px; 
+  font-family: verdana,arial,helvetica,sans-serif;
+  text-align:left; 
+  font-size:12px;
+  color:#003366;
+  font-weight:normal;
+  line-height:130%;
+}
+
+table#plcc_ad {
+  border-collapse: collapse;
+  border: 2px solid #006599; 
+}

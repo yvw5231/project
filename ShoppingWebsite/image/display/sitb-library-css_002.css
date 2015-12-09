@@ -1,0 +1,2103 @@
+
+  /*
+   * Copyright (c) 2007 Amazon.com, Inc., and its Affiliates.
+   * All rights reserved.
+   * Not to be reused without permission
+   * Version: 201205161341
+   */
+  
+/* 
+Common image use.  Placed at the top of the CSS file for 2 reasons
+  1) Easier to edit when changing images
+  2) Maintains proper order for subsequent value over-riding
+
+*/
+@media print {
+     .sitbReaderNoPrint { display: none }
+}
+
+#sitbReaderLoadingPageMessage {
+    display: none;
+    position: absolute; 
+    z-index: 190200;
+    top: -62px;
+    width: 100px;
+    height: 124px;
+    left: 40%;
+}
+
+#vellum {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: none;
+    z-index: 1000000;
+}
+
+#sitbLBHeader {
+    position: absolute;
+    top: -25px;
+    font-size: 14px;
+    z-index: 1000001;
+    width: 100%;
+    background-color:#EAF3FE;
+    background-position: 0px -518px;
+    border-bottom:1px solid #C2DDF2;
+    height: 32px;
+}
+#sitbReaderHeaderSpacer {
+  height: 2px;
+  position: absolute;
+  z-index: 1000001;
+  width: 100%;
+  bottom: 0px;
+  font-size: 2px;
+  background-color: white;
+}
+
+#sitbReaderPlaceholder {
+    display: none;
+    z-index: 100000;
+}
+
+#sitbLightbox {
+    position:absolute;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #fff;
+    width: 840px;
+    padding: 0px;
+    margin: 0px;
+    left: 50px;
+    z-index: 100000;
+    display: inline;  
+}
+
+#sitbReaderPageContainerVerticalScroller {
+    position: absolute;
+    width: 100%;
+    left: 224px;
+    z-index: 110100;
+}
+
+#sitbReaderMiddle {
+    position: relative;
+    top: 6px;
+    left: 0px;
+    right: 0px; 
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    background: #f7fbfb;
+}
+#sitbReaderBorderOverlay {
+    position: absolute;
+    bottom: -8px;
+    height: 8px;
+    font-size: 0;
+    left: 0px;
+    z-index: 99999;
+    background: #f7fbfb;
+    width: 100%;
+}
+
+#sitbReaderCloseButton {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 16px;
+    height: 15px;
+    font-size:10px;
+}
+
+#sitbReaderLookInside {
+    /*look-inside.png*/
+    background-position: 0 -791px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    height: 21px;
+    width: 104px;
+}
+
+#sitbReaderTitle {
+    position: absolute;
+    top: 5px;
+    left: 128px;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 0.86em;
+    color: #555555;
+    z-index: 100000;
+}
+
+#sitbReaderTBLinks {
+    position: absolute;
+    top: 7px;
+    right: 35px;
+    font-size: 0.625em;
+    color: #555;
+    letter-spacing: 4px;
+}
+
+#sitbReaderTBLinks a {
+    font-family: Verdana;
+    color: #004B91;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 0px;
+}
+
+#sitbReaderTBLinks a:hover {
+    border-bottom: 1px dashed #004B91;
+}
+
+#sitbReaderTBLinks a:active {
+    color:#F93; text-decoration:none; border-bottom:1px dashed;
+}
+
+#sitbReaderLeftPane {
+  position:relative;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+  left: 0px;
+  border: 0px;
+  width: 200px;
+  overflow: hidden;
+  height: 100%;
+  float: left;
+  z-index: 100000;
+  background:#fff;
+}
+
+#sitbReaderRightPageTurner {
+    z-index:    110005; 
+    /*background: url('pageTurner_next_Inactive.png') no-repeat;*/
+    background-position: 0 -1165px;
+    right: 5px;
+    width: 14px;
+    height: 29px;
+    position: absolute;    
+    filter: alpha(opacity=95);
+    opacity: 0.95;
+    display: none;
+    border: 0px;
+}
+
+#sitbReaderLeftPageTurner {
+    z-index: 110005;
+    /*background: url('pageTurner_prev_Inactive.png') no-repeat;*/
+    background-position: 0 -93px;
+    width: 14px;
+    left: 5px;
+    height: 29px; 
+    position: absolute;
+    filter: alpha(opacity=95);
+    opacity: 0.95;  
+    display: none;
+    border: 0px;
+}
+
+#sitbReaderRightSearchNav {
+    z-index: 100005;
+    background: no-repeat;
+    width: 33px;
+    right: -15px;
+    height: 80px;
+    top: -100px;
+    position: absolute;    
+    filter: alpha(opacity=95);
+    opacity: 0.95;
+}
+
+#sitbReaderLeftSearchNav {
+    z-index: 100001;
+    background: no-repeat;
+    width: 33px;
+    left: -15px;
+    height: 80px;
+    top: -100px;
+    position: absolute;
+    filter: alpha(opacity=95);
+    opacity: 0.95;
+}
+
+#sitbReaderPageContainer {
+    position: absolute;
+    height: 100%;
+    margin: 0px;
+    width: 656px;
+    top: 0px;
+    left: 206px;
+    border: 0px;
+    z-index: 100000;
+    overflow-y: auto;    
+    overflow-x: auto;
+}
+
+#sitbReaderMessageContainer {
+  position: absolute; 
+  background-color: #FFFFDD;
+  border: 1px solid #DDDBC2;
+  opacity: 0.9;
+  filter: alpha(opacity = 90);    
+  left: 206px;  
+  width: 595px;
+  top: 0;
+  text-align: left;
+  padding: 0px;
+  display: none;    
+  z-index: 1300010;
+  height: auto;
+  font-family: Verdana;
+  font-size: 11px;
+}
+
+#sitbReaderMessageHeader {       
+  font-weight: bold;
+  position: absolute;
+  left: 33px;
+  top: 5px;
+}
+
+#sitbReaderMessageList {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 125%;
+    top: 5px; 
+    .top: 9px; /* IE specific */
+    padding: 0;
+    padding-left: 33px;
+    padding-right: 4px;    
+    padding-bottom: 5px;
+    .padding-bottom: 10px; /* IE specific */    
+}
+
+#sitbReaderMessageList li {
+    margin: 0;
+    margin-bottom: 7px;
+    margin-left: 0px;
+    padding: 0px;
+    text-indent: 0px;
+    left: 0;
+}
+
+#sitbReaderMessageBoxContainer {
+    position: absolute; 
+    background-color: #FFFFFF;
+    border: 1px solid #DDDBC2;
+    filter: alpha(opacity = 90);    
+    left: 600px;  
+    width: 595px;
+    top: 300px;
+    text-align: left;
+    padding: 0px;
+    display: none;    
+    z-index: 1300010;
+    height: auto;
+    font-family: Verdana;
+    font-size: 13px;
+}
+
+#sitbReaderMessageBoxInfoHead {
+    font-weight: bold;
+    margin: 10px;
+    font-size: 15px;
+}
+
+#sitbReaderMessageBoxInfoBody {
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+#sitbReaderMessageBoxInfoMessageIcon {
+    background-position: 0 -56px;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+#sitbReaderMessageBoxCloseButton {
+    /*background: url("lb-close-x-header.gif") 0 0 no-repeat;*/
+    background-position: 0 -352px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+}
+
+#sitbReaderMessageBoxCloseLink {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+    font-family: Verdana;
+    color: #004B91;
+    text-decoration: none;
+    font-size: 1.0em;
+}
+
+#sitbReaderMessageBoxInputHead {
+    font-weight: bold;
+    height: 23px;
+    width: 575px;
+    padding: 11px;
+    font-size: 15px;
+    background-color: #EAF3FE;
+    background-position: 0 -518px;
+}
+
+#sitbReaderMessageBoxInputBody {
+    padding: 11px;
+    height: 33px;
+    font-size: 13px;
+}
+
+#sitbReaderInfoMessageIcon {
+    background-position: 0 -56px;
+    float: left;    
+    left: 4px;
+    top: 4px;
+    width: 25px;
+    height: 25px;
+}
+
+
+/*** Scroll specific ***/
+#sitbReaderPageScroll {
+    background: #F7FBFB;
+    position: absolute;
+}
+
+#sitbReaderPageScroll .pageImage {
+    position: absolute;
+    /**left: 80px;**/
+    overflow: none;
+    z-index: 100000;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 1px solid #CCCCCC;
+    margin-left: -4px;
+    background-color: #FFFFFF;
+}
+
+#sitbReaderPageScroll .pageHtml {
+    position: absolute;
+    /**left: 80px;**/
+    z-index: 100000;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 1px solid #CCCCCC;
+    margin-left: -4px;
+    background-color: #FFFFFF;
+}
+
+#sitbReaderPageScroll .pageHtml img {
+  position: static;
+}
+
+#sitbReaderPageScroll .scrollMessage {
+    position: absolute;
+    background-color: #FFFFDD;
+    font-family: verdana;
+    font-size: 11px;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -2px;
+}
+
+#sitbReaderPageScroll img {
+    -ms-interpolation-mode: bicubic;
+    position: absolute;
+    top: 0px;
+}
+
+#sitbReaderCloseButton {
+    /*background: url("lb-close-x-header.gif") 0 0 no-repeat;*/
+    background-position: 0 -352px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.sitbReaderSplitter {
+    position:absolute;
+    width: 6px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+    z-index: 1200001;
+    cursor: pointer;
+}
+
+#sitbReaderSplitter {
+    background-position:-90px 0;
+    left: 200px;
+    top: 0px;
+}
+
+#sitbReaderSplitter_bottom {
+    background-position:-90px 0;
+    height: 8px;
+    bottom: -8px;
+    left: 200px;
+}
+
+.sitbReader-toggle-opened {
+    position: relative;
+    /*panelArrow_open.png no-repeat*/
+    background-position: 0 -1947px; 
+    font-size: 5px;
+    height: 11px !important;
+    width: 11px;
+    top: 5px;
+    left: 7px;
+    cursor: pointer;
+}
+
+.sitbReader-toggle-closed {
+    position: relative;
+    background-position: 0 -1935px; 
+    font-size: 5px;
+    height: 11px !important;
+    width: 11px;
+    top: 5px;
+    left: 7px;
+    cursor: pointer;
+}
+
+.slbborder {
+    z-index: 100;
+}
+
+.sitbReader-pane-title {
+    position: relative;
+    height: 21px;
+    background-color: #EFF4F8;
+    border-top: 1px solid #D6E3ED;
+    border-bottom: 1px solid #D6E3ED;
+}
+
+.sitbReader-pane-title-text {
+    position: relative; 
+    top: -2px;
+    left: 24px; 
+    margin-top: -5px;
+    font-family: Verdana;
+    color: #555;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18em;
+    cursor: pointer;
+}
+
+#sitbReaderSB-history-title {
+    border-top: none;
+}
+
+.sitbReader-horizontal-white-border {
+    border-top: 1px solid white;
+}
+
+.sitbReader-horizontal-white-border-bottom {
+    border-top: 1px solid white;
+    position: relative;
+    top: 0px;
+}
+
+.sitbReader-horizontal-gray-dash-border {
+    border-top: 1px dashed #999;
+}
+
+.sitbReaderSearch-result a.sitbReader-link-visited, #sitbReaderBookmarks-pages .sitbReader-link-visited {
+    font-weight: normal;
+    color: #963 !important;
+}
+
+
+.sitbReaderSearch-result a.sitbReader-link-selected,
+#sitbReaderBookmarks-pages a.sitbReader-link-visited.sitbReader-link-selected {
+    font-weight: bold !important;
+    color: #000 !important;
+    cursor: default;
+    border: none !important;
+}
+
+.sitbReaderSearch-result a.sitbReader-link-disabled {
+    color: #AAA !important;
+    cursor: default;
+    border: none !important;
+}
+
+
+
+#sitbReader-tooltip {
+    font-family: arial;
+    font-size: 11px;
+    position: absolute;
+    width: 350px;
+    z-index: 1000001;
+    border: 1px solid #999;
+    background-color: white;
+    padding: 5px;
+}
+#sitbReader-tooltip h3, #tooltip div { margin: 0; }
+
+/*** Bookmarks ***/
+
+#sitbReaderBookmarks {
+    position: relative;
+}
+
+#sitbReaderBookmarks-pages {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    bottom: 0px;
+    padding-bottom: 10px;
+    margin-top: 3px;
+    padding-left: 10px;
+    line-height: 20px;
+
+    /*IE specific*/
+    .padding-left: 0px;
+    .margin-left: 10px;
+}
+
+#sitbReaderBookmarks-pages a {
+    font-family:Verdana;
+    white-space:nowrap;
+    color:#004B91;
+    font-size:11px;
+    border:none;
+    outline: none;
+    text-decoration:none;
+}
+#sitbReaderBookmarks-pages a:Hover { color:#004B91; text-decoration:none; border-bottom:1px dashed; }
+#sitbReaderBookmarks-pages a:Active { color:#F93; text-decoration:none; border-bottom:1px dashed; }
+#sitbReaderBookmarks-pages a:Visited { color:none; }
+
+.sitbReader-bookmark-disabled {
+    border:medium none;
+    outline:medium none;
+    font-family:Verdana;
+    font-size:11px;
+    text-decoration:none;
+    white-space:nowrap;
+    color: #999;
+}
+
+/*** Buy ***/
+#sitbReaderBuy {
+    position: relative;
+    height: 13em;
+}
+
+#sitbReaderCustomerReviews {
+    padding-right: 10px;
+}
+
+#sitbReaderBuyContent {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-family: Verdana;
+    font-size: 0.7em;
+}
+#sitbLightbox form {
+    margin: 0px;
+}
+
+#sitbReaderBookThumbnail, .sitbReaderBookThumbnail {
+    float: left;
+    margin-right: 10px;
+    border: 0;
+    z-index: 100100;
+}
+
+#sitbReaderBookThumbnail img {
+	border: 0;
+    z-index: 100100;
+}
+
+#sitbReaderBookTitle a {
+    color: #004B91;
+    font-family: Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 1.25em;
+}
+
+#sitbReaderBookTitle a:hover {
+    text-decoration: underline;
+}
+
+#sitbReaderBookTitle {
+    margin-bottom: 3px;
+    float: right;
+    width: 145px;
+}
+
+#sitbReaderAuthorBlock {
+    color: black;
+    text-decoration: none;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    float: right;
+    width: 145px;
+}
+#sitbReaderAuthorBlock a {
+    text-decoration: none;
+    color: #004B91;    
+}
+#sitbReaderAuthorBlock a:hover {
+    text-decoration: underline;
+}
+
+.sitbReaderPriceTitle {
+    color: #666666;
+}
+
+.sitbReaderPrice {
+    color: #990000;
+    font-weight: bold;
+}
+
+#sitbReaderUsedCount {
+    color: #004B91;
+}
+
+#sitbReaderBinding {
+    color: #004B91;
+}
+
+#sitbReaderPriceBlock {
+    clear: left;
+}
+
+#sitbReaderCartDiv {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+#sitbReaderCartButton {
+    /* reader-add-to-cart-button.gif */
+    background-position: 0 -1019px;
+    height: 17px;
+    width: 71px;
+    cursor: pointer;
+    border: 0px;
+}
+#sitbKindleReaderCartButton {
+    /* reader-add-to-cart-button.gif */
+    background-position: 0 -3504px;
+    height: 17px;
+    width: 96px;
+    cursor: pointer;
+    border: 0px;
+}
+
+#sitbKindleReaderSendSampleButton {
+    background-position: 0 -3487px;
+    height: 17px;
+    width: 99px;
+    cursor: pointer;
+    border: 0px;
+}
+
+#sitbKindleReaderSendSampleText {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+#sitbKindleReaderDeliverToText {
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+#sitbReaderDeviceSelect {
+    width: 180px;
+}
+
+/*** Search ***/
+
+#sitbReaderSearch {
+  position: relative;
+}
+
+#sitbReaderSearch-input {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.sitbReaderSearch-inputbox {
+    width: 149px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.sitbReaderSearch-button {
+    /*search_Go_button.png*/
+    background-position: 0 -552px;    
+    border: 0px;
+    display: inline;
+    height: 21px;
+    width: 21px;
+    outline: none;
+    cursor: pointer;
+    float:right;
+    margin-left: 160px;
+    margin-top: -30px;
+}
+
+#sitbReaderSearch-count {
+    /*Search_sumOrangeBg._V1_.png #fcdba9 repeat-x;*/
+    background: #fcdba9 repeat-x;
+    background-position: 0 -247px;
+    display: none;
+    margin-top: 0px;
+    margin-left: -7px;
+    width: 192px;
+    margin-bottom: 5px;
+    font-size: 17px; 
+}
+
+#sitbReaderSearch-count-text {
+    font-family: Arial;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.sitbReaderSearch-count-block {
+    padding-left: 4px;
+}
+
+#sitbReaderSearch-close {
+    /*background: url(search_close_button.png) no-repeat;*/
+    background-position: 0 -368px;
+    height: 7px;
+    width: 6px;
+    margin-top: 3px;
+    margin-right: 4px;
+    font-size: 7px;
+    cursor: pointer;
+    float: right;
+}
+#sitbReaderSearch-contents {
+    padding-right: 10px;
+    padding-left: 10px;
+    .width: 200px;
+    margin: 0px;
+}
+
+.sitbReaderSearch-more-results {
+    display: block;
+    bottom: 5px;
+    left: 54px;
+    height: 12px;
+    color: #004B91;    
+    text-decoration: none;
+    left: 20px;
+    cursor: pointer;
+    background-position: 0 -280px;
+}
+
+.sitbReaderSearch-more-results a {
+    color: #004B91;        
+    text-decoration: none;
+    font-size: 0.7em;
+    border-bottom: 1px dashed #004B91;
+    position: relative;
+    left: 12px;    
+}
+
+.sitbReaderSearch-more-results-loading {
+    z-index: 100200;
+    border: none;
+}
+
+#sitbReaderSearch-sips {
+    font-family: Verdana;
+    font-size: 11px;
+    width: 180px;
+    overflow: hidden;
+    line-height: 1.4em;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+#sitbReaderSearch-sips a {
+    font-family:Verdana;
+    color:#004B91;
+    font-size:11px;
+    border:none;
+    outline: none;
+    text-decoration:none;
+}
+#sitbReaderSearch-sips a:Hover { color:#004B91; text-decoration:none; border-bottom:1px dashed; }
+#sitbReaderSearch-sips a:Active { color:#F93; text-decoration:none; border-bottom:1px dashed; }
+
+.sitbReaderSearch-result {
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 160px;
+}
+
+.sitbReaderSearch-result a:link {
+    font-family: Verdana;
+    color: #004B91;
+    font-size: 11px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+/* IE sometimes goes * and ignores the a:link style */
+.sitbReaderSearch-result a {
+    font-family: Verdana;
+    color: #004B91;
+    font-size: 11px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.sitbReaderSearch-result a:hover { 
+    color:#004B91; 
+    text-decoration:none; 
+    border-bottom: 1px dashed #004B91; 
+}
+
+.sitbReaderSearch-result-page { text-decoration: none !important; }
+
+#sitbReaderSearch-all-results {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -2px;
+    margin-right: -10px;
+}
+
+
+#sitbReaderSearch-loading {
+    position: absolute; 
+    z-index: 100200;
+    display: none;
+    left: 54px;
+    top: 200px;
+    width: 73px;
+    height: 14px;
+}
+
+#sitbReaderSearch-highlight {
+    background-color:#ff9930;
+    position:absolute;
+}
+
+/* Zoom Controls */
+
+#sitbReaderZoomToolbar {
+    position: absolute;
+    top: 6px;
+    z-index: 1000020;    
+}
+
+#sitbReaderTitlebarZoomIn {
+    position: absolute;
+    background-position: 0 -2049px;
+    top: 0px;
+    left: 0px;
+    height: 17px;
+    width: 53px;
+    cursor: pointer;
+    border-style: none;
+}
+
+#sitbReaderTitlebarZoomOut {
+    position: absolute;
+    background-position: 0 -1995px;
+    top: 0px;
+    left: -53px;
+    height: 17px;
+    width: 53px;
+    cursor: pointer;
+    border-style: none;	
+}
+#vellumLdgIco,
+#sitbReaderLoadingPageMessage {
+    width:100px;
+    height:124px;
+    display: none;
+    position: absolute; 
+}
+
+#sitbReaderLoadingPageMessage {
+    z-index: 190200;
+    top: -62px;
+    left: 40%;
+}
+
+/*- TODO move common loading image style to a class? */
+#vellumLdgIco {
+    z-index: 190000;
+}
+
+#sitbReaderErrorMessageContainer {
+    display: none;
+    z-index: 200000;
+    width: 420px;
+    position: absolute;
+    border: 1px solid #E69C00;
+    opacity: 1;
+    text-align: left;
+    padding-top: 2px;
+    padding-right: 10px;
+    background-color:#FFFFDD; 
+}
+
+#sitbReaderUnavailableText {
+    font-family: Verdana;
+    font-size: small;
+    .font-size: x-small; /* IE specific */ 
+}
+
+#sitbReaderUnavailableMessageContainer {
+    display: none;
+    z-index: 200000;
+
+    position: absolute;
+    opacity: 1;
+    text-align: center;
+    background-color:#FFFFDD; 
+    padding: 20px;
+    /* Want a 20 pixel margin with thepage turners, which are 15 pixels from the page border 
+    margin-left: 35px;
+    margin-right: 35px;*/
+}
+
+#sitbReaderErrorMessageIcon {
+    left: 5px;
+    top: 5px;    
+    width: 25px;
+    height: 25px;
+    position: absolute;
+
+    /*background: url('msg-icon-3.gif') no-repeat;*/
+    background-position: 0 -237px;
+    background-color:#FFFFDD;
+}
+
+#sitbReaderErrorMessageText {
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-family: Verdana;
+    font-size: small;
+    .font-size: x-small; /* IE specific */ 
+}
+
+#sitbReaderErrorMessageHeader {
+    padding-top: 10px;
+    padding-left: 40px;
+    font-family: Verdana;
+    font-size: small;
+    .font-size: x-small; /* IE specific */  
+    font-weight: bold;
+}
+
+#sitbReaderErrorMessageClose, .sitbReaderErrorMessageClose {
+    position: absolute; 
+
+    right: 3px;
+    top: 3px;
+    width: 13px;
+    height: 11px;
+
+    /*background: url('msg_closeBtn.png') no-repeat;*/
+    background-position: 0 -981px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.sitbReaderScrollInfoMessageIcon {
+    background-position: 0 -3419px;
+    float: left;
+    position: absolute;
+    top: 10px;
+    width: 17px;
+    height: 17px;
+}
+.sitbReaderScrollInfoMessageText {
+    float: left;
+    position: absolute;
+}
+
+/*** Feedback ***/
+
+#sitbReader-fb-reset {
+    display:none;
+}
+
+.sitbReaderFeedbackMenu-char {
+    color: #777777;
+    font-size: 0.9em;
+}
+
+#sitbReaderFeedbackMenu-pdiv {
+    padding-bottom: 10px;
+}
+
+#sitbReaderFeedbackMenu-typediv,
+#sitbReaderFeedbackMenu-txtadiv,
+#sitbReaderFeedbackMenu-recomdiv {
+    padding-bottom: 6px;
+}
+
+#sitbReaderFeedbackMenu-type,
+#sitbReaderFeedbackMenu-recommendations {
+    height: 1.7em;
+    font-size: 1em;
+    font-family: verdana;	
+}
+
+#sitbReaderFeedbackMenu-recommendations {
+    width: 275px;
+}
+
+.sitbReaderFeedbackMenu-textarea {
+    height:5.5em;
+    width:275px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: auto;
+    color: gray;
+    font-family: verdana;
+    font-size: 1em;
+    resize: none;
+}
+
+.sitbReaderFeedbackMenu-wrap {
+    height: 35px;
+}
+
+.sitbReaderFeedbackMenu-loading {
+    position: absolute;
+    display: none;
+    bottom: 10px;
+    left: 15px;
+    height: 16px;
+    width: 16px;
+}
+
+.sitbReaderFeedbackMenu-thanks {
+    position:absolute;
+    display: none;
+    left:35px;
+    width:130px;
+    bottom:4px;
+    color:#009900;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.sitbReaderFeedbackMenu-submit {
+    position: absolute;
+    /*background: url('submit.png') no-repeat;*/
+    background-position: 0 -263px;
+    bottom: 9px;
+    right: 75px;
+    height: 17px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.sitbReaderFeedbackMenu-cancel {
+    position: absolute;
+    /*background: url('cancel.png') no-repeat;*/
+    background-position: 0 -611px;
+    bottom: 9px;
+    right: 15px;
+    height: 17px;
+    width: 49px;
+    cursor: pointer;
+}
+
+.sitbReaderFeedbackMenu-required {
+  color: red;
+  display: none;
+  font-size: 0.9em;
+  font-style: italic; 
+}
+
+/**** Help ****/
+
+.sitbReaderFaqHeader {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 0.85em;
+    .font-size: 1em;
+}
+
+.sitbReaderHelpTable {
+    margin-left: -5px;
+}
+
+.sitbReaderHelpTableRow {
+    float: left;
+    border: none;
+    border-collapse: collapse;
+    position: relative;
+    font-size: 0.85em;
+}
+
+.sitbReaderHelpTableCol1,
+.sitbReaderHelpTableCol2,
+.sitbReaderHelpTableCol3 {
+    display: block;
+    height: auto;
+    position: relative; 
+    float: left;
+    margin-top: 4px;    
+}
+
+.sitbReaderHelpTableCol1 {
+    width: 30px;
+}
+
+.sitbReaderHelpTableCol2 {
+    width: 270px;
+    left: 12px;
+}
+
+.sitbReaderHelpTableCol3 {
+    width: auto;
+    left: 12px;
+}
+
+.sitbReaderHelpYellowBullet {
+    width: 0;
+    font-family: sans-serif;
+    color: orange;
+    font-size: 1.2em;    
+    .font-size: 2em; /* for IE */
+    font-weight: 900;
+    top: 0;
+    left: 3px;    
+}
+
+.sitbReaderHelpQuestionIcon {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    left: 0px;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+}
+
+.sitbReaderHelpQuestionIconActive {
+    background-position: 0 -225px;
+}
+
+.sitbReaderHelpQuestionIconInactive {
+    background-position: 0 -761px;
+}
+
+.sitbReaderHelpQuestionText,
+.sitbReaderHelpAnswer,
+#sitbReaderHelpLearnMore {
+    color: #004B91;
+    font-family: Verdana;
+    font-size: 1em;
+    .font-size: 1.2em;  /* for IE */        
+    letter-spacing: 0;
+    text-decoration: none;
+    width: 265px;
+    left: 4px;
+    position: relative;
+}
+#sitbReaderHelpLearnMore{
+	width: auto;
+}
+
+.sitbReaderHelpQuestionText {
+    letter-spacing: 0;
+    cursor: pointer;    
+    top: -4px;
+}
+
+.sitbReaderHelpQuestionActive {
+    font-weight: bold;  
+}
+
+.sitbReaderHelpQuestionInactive {
+    font-weight: normal;
+}
+
+
+.sitbReaderHelpAnswer {
+    display: none;    
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+#sitbReaderHelpLearnMore {
+    top: 3px;
+    .top: 0;
+    .left: -2px;    
+    text-decoration: underline;
+}
+
+/**** Menu ****/
+
+#sitbReaderHelpMenu {
+    display: none;
+    position: absolute;
+    top: -4px;
+    z-index:1000001;
+    letter-spacing: 0px;
+    font-size: 1.2em;
+}
+
+#sitbReaderMenu-top {
+    position:absolute;
+    .width:46px;
+    z-index:1000001;
+}
+
+#sitbReaderMenu-content {
+    position: absolute;
+    width: 310px;
+    top: 25px;
+    z-index: 1000001;
+}
+
+#sitbReaderMenu-topcontent {
+    width:29px;
+    .width:50px;
+    padding-left: 5px;
+    padding-right: 12px;
+}
+
+#sitbReaderMenu-close {
+    background-position: 0 -368px;
+    position: absolute;
+    height: 7px;
+    width: 6px;
+    right: 10px;
+    top: 8px;
+    font-size: 7px;
+    cursor: pointer;
+}
+
+#sitbReaderMenu-content a {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+#sitbReaderMenu-content a:hover {
+    border-bottom: none;
+}
+
+
+/* Top */
+
+.sitbReaderMenu-topleft {
+    background-position: 0 -1451px;
+    width:7px;
+    height:7px;
+    font-size: 7px;
+    top:0;
+    left:0;
+    position:absolute;
+}
+
+.sitbReaderMenu-topborder {
+    background-position: 0 -210px; 
+    position:absolute;
+    height:1px;
+    font-size: 1px;
+    left: 7px;
+    right:7px;
+    top:0;
+}
+.sitbReaderMenu-topborder-top {
+    .width:46px;
+}
+.sitbReaderMenu-topborder-content {
+    width:254px;
+    .width:250px;
+}
+
+.sitbReaderMenu-topright {
+    background-position: 0 -1429px;
+    width:7px;
+    height:7px;
+    font-size: 7px;
+    top:0;
+    right:0;
+    position:absolute;
+}
+.sitbReaderMenu-topright-top {
+    .left:50px;
+}
+
+/* Middle */
+
+.sitbReaderMenu-leftborder {
+    background-position: -74px 0;
+    width:4px;
+    position:absolute;
+    top:7px;
+    left:0;
+    bottom:0;
+    .height: 20px;
+}
+
+.sitbReaderMenu-content {
+    color: black;
+    background-color:#FFF;
+    padding: 15px;
+    padding-top: 4px;
+    font-family:verdana;
+    margin-left: 4px;
+}
+.sitbReaderMenu-content-center {
+    width:275px;
+    .width:306px;
+    line-height:15px;
+    padding-top:8px;
+}
+
+.sitbReaderMenu-rightborder {
+    background-position: -86px 0;
+    width:3px;
+    position:absolute;
+    top:7px;
+    right:0;
+    bottom:0;
+}
+.sitbReaderMenu-rightborder-top {
+    .left:54px;
+}
+.sitbReaderMenu-rightborder-content-top {
+    height:7px;
+    top:0;
+    left:308px;
+}
+.sitbReaderMenu-rightborder-content {
+    left:308px;
+}
+/* Bottom */
+
+.sitbReaderMenu-bottomleft {
+    background-position: 0 -1437px;
+    width:7px;
+    height:7px;
+    font-size: 1px;
+    left:0;
+    position:absolute;
+}
+
+.sitbReaderMenu-bottomborder{
+    background-position: 0 -218px;
+    position:absolute;
+    left:7px;
+    right:7px;
+    height:7px;
+    font-size: 6px;
+}
+
+.sitbReaderMenu-bottomborder-content {
+    width:297px;
+}
+
+.sitbReaderMenu-bottomright {
+    background-position: 0 -1444px;
+    width:7px;
+    height:7px;
+    font-size: 1px;
+    position:absolute;
+    right:0;
+}
+.sitbReaderMenu-bottomright-content {
+    left:304px;
+}
+
+#vellumShade {
+    background-color: #3f4c58;
+    z-index: 90000;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.sitbReaderEllipses {
+    letter-spacing: -1px;
+}
+
+
+/*** Serendipity Bar ***/
+
+#sitbReaderSB {
+    position: absolute;
+    margin: 0px;
+    padding-right: 0px;
+    padding-bottom: 8px;
+    right: 0px;
+    border: 0px;
+    width: 0px;
+    overflow: hidden;
+    height: 100%;
+    float: left;
+    z-index: 100000;
+    background:#fff;
+    font: 0.7em verdana;    
+}
+
+#sitbReaderSBSplitter {
+    width: 12px;
+    right: 0px;
+}
+
+.sitbReaderSBSplitter {
+    background-position:-97px 0;
+    position:absolute;
+    height: 100%;
+    width: 12px;
+    right: 0px;
+    z-index: 1200001;
+    cursor: pointer;
+}
+
+#sitbReaderSBSplitter_btm {	
+    bottom: -9px;
+    height: 8px;
+}
+
+#sitbReaderSBSplitter_mid {
+    height:101%;
+}
+
+#sitbReaderSBOpener {
+    background-position: 0 -2086px;
+    position: absolute;
+    right: 0px;
+    width: 18px;
+    height: 263px;
+    z-index: 1200002;   
+    cursor: pointer;
+}
+
+
+#sitbReaderSB {
+    width: 0px;
+    font-family:Verdana;
+    font-size:0.7em;
+}
+
+#sitbReaderSB #historyinfo {
+    color: #e1750e;
+    margin: 10px;
+}
+
+#sitbReaderSB #historyinfo #histstatustext {
+    color:#000;
+    padding-bottom: 0.5em;
+    display: none;
+}
+
+
+#sitbReaderSB #historyholder {
+    height: 200px;
+    overflow: hidden;
+
+}
+
+#sitbReaderSB #recholder {
+    overflow: hidden;
+    height: 200px;
+}
+
+#sitbReaderSB #recs {
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+#sitbReaderSB .book {
+    padding-bottom: 10px;
+    margin: 5px 0px 5px 10px;
+    width: 194px;
+    clear: both;
+}
+
+#sitbReaderSB a {
+    color:#004B91;
+}
+
+#sitbReaderSB .book a {
+    display: block;
+    padding-bottom: 0.3em;
+}
+
+#sitbReaderSB .book #info {
+    color:#626465;
+    margin-top: 3px;
+    margin-left: 46px;
+}
+#sitbReaderSB .book #info img {
+    margin-bottom: -3px;
+}
+
+#sitbReaderSB .book #info #count {
+    color:#004B91;
+}
+
+#sitbReaderSB .book #info #price {
+    color:#990000;
+}
+
+#sitbReaderSB .review {
+    cursor:pointer;
+}
+
+#sitbReaderSB .book #buybutton {
+    margin-left: 46px;
+    margin-top: 6px;
+}
+
+#sitbReaderSB .book form {
+    padding: 0px;
+    margin: 0px;	
+}
+
+#sitbReaderSB .book #litbbutton {
+    background-position: 0 -2067px;
+    width: 124px;
+    height: 17px;	
+    margin-left: 46px;
+    margin-top: 6px;
+    cursor: pointer;
+    border: 0px;
+    display: block;
+}
+
+#sitbReaderSB .pager {
+    float: left;
+    width: 214px;
+}
+#sitbReaderSB #nav {
+    text-align: center;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 47px;
+    height: 20px;
+    clear: both;
+    border: 0px;
+}
+
+#sitbReaderSB #navinfo {
+    float: left;
+    height: 14px;
+    width: 76px;
+    margin-left: 3px;
+}
+
+#sitbReaderSB #nav #next {
+    background-position: 0 -3404px;
+    height: 14px;
+    width: 20px;
+    float: right;
+    border: 0px; 
+}
+#sitbReaderSB #nav #prev {
+    background-position: 0 -3389px;
+    height: 14px;
+    width: 20px;
+    float: left;
+    border: 0px;
+}
+
+#sitbReaderSB #nav .enabled {
+    color: #004991;
+    cursor: pointer;
+}
+
+#sitbReaderSB #nav #next.enabled {
+    background-position: 0 -3344px;
+}
+#sitbReaderSB #nav #prev.enabled {
+    background-position: 0 -3329px;
+}
+
+#sitbReaderSB #nav #prev.sbhighlight {
+    background-position: 0 -3359px;
+}
+
+#sitbReaderPageScroll .toclink {
+    position: absolute;
+    .margin-top: 2px; /* IE Box model hack */
+    .margin-left: 2px;
+    border-bottom: 1px solid #0066cc;
+    cursor: pointer;
+    font-size: 1px;
+}
+
+#sitbReaderPageScroll .toclink.tocvisited {
+    border-bottom-color: #996633 !important;
+}
+
+#sitbReaderPageScroll .toclink.tocvisited * {
+    background-color: #996633 !important;
+}
+
+#sitbReaderPageScroll .toclink.tocunavailable {
+    border-bottom-color: #000 !important;
+}
+
+#sitbReaderPageScroll .toclink.tocunavailable * {
+    background-color: #000 !important;
+    cursor: default;
+}
+
+#sitbReaderPageScroll .toclink * {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #0066cc;
+    opacity: 0.10;
+    filter: alpha(opacity=10);
+    cursor: pointer;
+    border: 0px;
+}
+
+#sitbReaderPageScroll .toclink.tochover {
+    border-bottom-style: dashed;
+    cursor: pointer;
+}
+
+/* Use opacity 0 instead of background:none otherwise IE freaks out...*/
+#sitbReaderPageScroll .toclink.tochover * {
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+#sitbReaderSB #nav #next.sbhighlight {
+    background-position: 0 -3374px;
+}
+
+#sitbReaderSB #simsinfo {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+#sitbReaderSB .hideforloading {
+    display: none;
+}
+
+.sitbReaderSB-content {
+    background-position: 70px 50%; 
+}
+
+
+
+/**** Left Pane Stuff ***/
+
+#sitbReaderCollapser {
+    background-position: 0 -3140px;
+    height:47px;
+    width:16px;
+    position: absolute;
+    left: 200px;
+    cursor: pointer;
+    z-index: 1400001;
+}
+
+#sitbReaderPageLabel {
+    font-family: Verdana;
+    position: absolute;
+    font-size: 11px;
+    padding-top: 7px;
+}
+
+#sitbLightbox .imageOverlay {
+	z-index: 100;
+	position: absolute;
+    top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/** Mode Switch **/
+#sitbReaderMode {
+  position: absolute;
+  top: 5px;
+  left: 130px;
+  height: 25px;
+  background-repeat: repeat-x;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana;
+  text-align: center;
+}
+#sitbReaderMode #readerModeTabKindle {
+  left: 0px;
+  top: 0px;
+}
+#sitbReaderMode #readerModeTabPrint {
+  left:  130px;
+  top: 0px;
+}
+#sitbReaderMode .readerModeTab {
+  color: #004B91;  
+  background-position: 0 -339px;
+  position: absolute;
+  cursor: pointer;
+  width: 120px;
+  height: 25px;
+  margin: 0 5px;
+}
+#sitbReaderMode .readerModeTab div {
+  position: absolute;
+  height: 25px;
+}
+#sitbReaderMode .readerModeTabBorder {
+  top: 0px;
+  width: 4px;
+  background-repeat: repeat-x;
+}
+#sitbReaderMode .readerModeTabContent {
+  top: 5px;
+  left: 4px;
+  width: 112px;
+}
+#sitbReaderMode .readerModeTabBorderLeft {
+  left: 0px;
+  background-position: 0 -389px;
+}
+#sitbReaderMode .readerModeTabBorderRight {
+  right: 0px;
+  background-position: 0 -364px;
+}
+#sitbReaderMode .activeReaderModeTab {
+  background-position: 0 -264px;
+  color: #E1750E;
+}
+#sitbReaderMode .activeReaderModeTab .readerModeTabBorderLeft {
+  background-position: 0 -314px;
+}
+#sitbReaderMode .activeReaderModeTab .readerModeTabBorderRight {
+  background-position: 0 -289px;
+}
+#sitbReaderMode .deactivatedReaderModeTab {
+  background-position: 0 -414px;
+  color: #898989;
+  cursor: auto;
+}
+#sitbReaderMode .deactivatedReaderModeTab .readerModeTabBorderLeft {
+  background-position: 0 -464px;
+}
+#sitbReaderMode .deactivatedReaderModeTab .readerModeTabBorderRight {
+  background-position: 0 -439px;
+}
+
+/** Bottom Button **/
+#sitbReaderBottomButton {
+  cursor: pointer;
+  background-repeat: repeat-x;
+  font-weight: bold;
+  position: absolute;
+  height: 30px;
+  bottom: -8px;
+  z-index: 100001;
+}
+#sitbReaderBottomButton .readerBottomButton {
+  position: absolute;
+  width: 22px;
+  height: 12px;
+  top: 9px;
+  font-size: 1px;
+}
+#sitbReaderBottomButtonLeft {
+  left: 60px;
+}
+#sitbReaderBottomButtonRight {
+  right: 60px;
+}
+
+/** Kindle Sample **/
+#sitbReaderKindleSample {
+	margin-left: 60px;
+	margin-right: 60px;
+	font-family: Georgia, serif;
+	word-wrap: break-word;
+	line-height: 1.4;
+}
+
+#sitbReaderKindleSample center, #sitbReaderKindleSample dd, #sitbReaderKindleSample div, #sitbReaderKindleSample dl,
+#sitbReaderKindleSample dt, #sitbReaderKindleSample li, #sitbReaderKindleSample ol, #sitbReaderKindleSample pre,
+#sitbReaderKindleSample table, #sitbReaderKindleSample ul, #sitbReaderKindleSample hr, #sitbReaderKindleSample h1,
+#sitbReaderKindleSample h2, #sitbReaderKindleSample h3, #sitbReaderKindleSample h4, #sitbReaderKindleSample h5,
+#sitbReaderKindleSample h6 { 
+	color: black;
+	font-family: Georgia, serif; 
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/** Override font-size attribute set for entire Detail Page
+ * https://p4db.amazon.com/source-views/p4db/website-templates/fileLogView.cgi?FSPC=//brazil/src/appgroup/websiteTemplates/retail/AmazonFamilyDetailPageFeatureMason/mainline/dpCSSEmit/css/detail-page-css.css
+ * This causes some Kindle samples to render incorrectly: https://tt.amazon.com/0013188745
+ */
+#sitbReaderKindleSample h2 {
+    font-size: 1.5em;
+}
+
+#sitbReaderKindleSample blockquote {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0;
+}
+
+#sitbReaderKindleSample .sitb-amazon-table-style-1, #sitbReaderKindleSample .sitb-amazon-table-style-1 tr, 
+#sitbReaderKindleSample .sitb-amazon-table-style-1 td, #sitbReaderKindleSample .sitb-amazon-table-style-1 tbody {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    font-size: medium;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    white-space: normal;
+}
+
+#sitbReaderKindleSample .sitb-indent, #sitbReaderKindleSample .sitb-was-a-p, #sitbReaderKindleSample p { 
+	text-indent: 1em; 
+	margin-bottom: 0px; 
+	margin-top: 0px;
+}
+
+#sitbReaderKindleSample .sitb-page-break {
+  display: block;
+  height: 25px;
+}
+
+#sitbReaderKindleSample a { 
+	font-family: Georgia, serif; 
+}
+
+#sitbReaderKindleSample a:link { 
+	font-family: Georgia, serif;
+}
+
+/* Place space after cover image, to create break between cover and title page*/
+#sitbReaderKindleSample img[name="coverimage"] {
+    margin-bottom: 50px;
+}
+
+#sitbReaderEndOfSample { 
+	height: 1px;
+}
+
+#sitbReaderKindleSample .sitb-buy-box {
+  text-indent: 0px;
+  text-align: center;
+  line-height: 150%;
+}
+
+#sitbReaderCustomerRequestContainer {    
+    position: absolute; 
+    font-weight: normal;
+    background-color: #FFFFFF;
+    border: 1px solid #C2DDF2;
+    left: 0px;
+    top: 23px;  
+    width: 320px;
+    text-align: left;
+    padding: 9px;
+    display: none;    
+    z-index: 1300010;    
+    height: 116px !important;
+}
+
+#sitbReaderCustomerRequestWrapper {
+    height: 96px !important;
+    width: 300px;
+}
+
+#sitbReaderCustomerRequestContent {    
+    margin: 0 5px 0 69px;
+    font-family: Verdana;
+    font-size: 11px;
+    color: #000000;
+    height: 88px !important;
+    width: 226px;
+}
+
+#sitbReaderCustomerRequestContent span{
+    color: #E47911;
+}
+
+#sitbReaderCustomerRequestContent a{
+    color: #004B91;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#sitbReaderCustomerRequest-loading {
+    width: 100px;
+    height: 50px;
+    left: 50px;
+    top: 40px;
+}
+#sitbReaderRightSearchNav,
+#sitbLightbox,
+#sitbReaderLeftSearchNav,
+#sitbLightbox .imageOverlay {
+    background-image: url(http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/trans._V1_.gif);
+}
+
+.sitbReaderMenu-topborder,
+#sitbReaderSearch-count,
+.sitbReaderMenu-bottomborder{
+    background-image: url(http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/sitbreader-vert-sprites._V1_.png);
+    background-repeat: repeat-x;
+}
+
+#sitbReaderSearch-loading,
+#sitbReaderCustomerRequest-loading,
+.sitbReaderSB-content,
+.sitbReaderSearch-more-results-loading {
+    background-image: url(http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/loading-pre-search._V1_.gif);
+    background-repeat: no-repeat;
+}
+
+.sitbReaderSBSplitter,
+.sitbReaderMenu-rightborder,
+.sitbReaderMenu-leftborder,
+#sitbReaderSplitter_bottom,
+#sitbReaderSplitter {
+    background-image: url(http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/sitbreader-horz-sprites._V1_.png);
+    background-repeat: repeat-y;
+}
+
+#sitbReaderSB #nav #next,
+#sitbReaderSB #nav #prev,
+.sitbReaderHelpQuestionIconInactive,
+#sitbReaderTitlebarZoomIn,
+#sitbReaderSearch-close,
+#sitbReaderCloseButton,
+#sitbReaderRightPageTurner,
+.sitbReaderMenu-bottomleft,
+.sitbReader-toggle-closed,
+.sitbReaderMenu-bottomright,
+.sitbReaderMenu-topleft,
+.sitbReaderFeedbackMenu-cancel,
+.sitbReaderSearch-more-results,
+#sitbReaderLeftPageTurner,
+.sitbReaderMenu-topright,
+#sitbReaderTitlebarZoomOut,
+.sitbReaderHelpQuestionIconActive,
+.sitbReaderFeedbackMenu-submit,
+#sitbReaderSB .book #litbbutton,
+#sitbReaderErrorMessageIcon,
+.sitbReaderSearch-button,
+#sitbReaderErrorMessageClose,
+.sitbReaderErrorMessageClose,
+#sitbReaderInfoMessageIcon,
+.sitbReaderScrollInfoMessageIcon,
+#sitbReaderMenu-close,
+#sitbReaderLookInside,
+#sitbReaderCollapser,
+#sitbReaderSBOpener,
+#sitbReaderCartButton,
+#sitbKindleReaderCartButton,
+#sitbKindleReaderSendSampleButton,
+#sitbReaderMessageBoxCloseButton,
+#sitbReaderMessageBoxInfoMessageIcon,
+.sitbReader-toggle-opened {
+    background-image: url(http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/sitbreader-sprites._V1_.png);
+    background-repeat: no-repeat;
+}
+
+#sitbReaderLoadingPageMessage {
+    background-image: url('http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/loading-pre-lightbox._V1_.gif');
+    background-repeat: no-repeat;
+}
+
+#sitbReaderPageScroll .pageImage {
+    background-image: url('http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/loading-pre-lightbox._V1_.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sitbReaderFeedbackMenu-loading {
+    background-image: url('http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/loadIndicator-noLabel._V1_.gif');
+    background-repeat: no-repeat;
+}   
+
+#sitbReaderCartButton {
+    width: 86px;
+}
+
+#sitbReaderTBLinks a,
+#sitbReaderSB .book,
+#sitbReaderPageScroll .scrollMessage,
+#sitbReaderSearch-sips,
+#sitbReaderMessageContainer,
+#sitbReaderBookmarks-pages a,
+.sitbReaderMenu-content,
+.sitbReader-pane-title-text,
+.sitbReaderHelpAnswer
+{
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size: x-small;
+}
+
+#sitbReaderSB #nav {
+    margin-left:20px;
+    width:175px;
+}
+
+#sitbReaderSB #navinfo {
+    margin-left:3px;
+    width:128px;
+}
+
+.sitbReaderMenu-content-center {
+	line-height = 18px;
+}
+
+.loadingLarge {
+    background-image: url('http://g-ecx.images-amazon.com/images/G/28/digital/sitb/reader/v4/201111161604/loading-pre-lightbox._V1_.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sitbReaderCustomerRequestWrapper {
+    background-image: url('http://g-ecx.images-amazon.com/images/G/01/kindle/merch/global/kindle-turing-widget-photo_020509._V186822375_.jpg');    
+    background-repeat: no-repeat;
+}

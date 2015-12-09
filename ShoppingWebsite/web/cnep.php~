@@ -1,0 +1,121 @@
+<?php
+session_start();
+$conn=mysql_connect("localhost", "root", "") or die("数据库连接错误！");
+mysql_select_db("league") or die("数据库名称错误");
+?>
+
+<?php  
+if($_SESSION['name']==NULL)
+{
+    echo "<script>alert('您尚未登录，请登录后再尝试本操作！');history.back();</script>";
+}
+?>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>修改用户信息</title>
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	width:144px;
+	height:61px;
+	z-index:1;
+	left: 266px;
+	top: 1px;
+}
+#Layer2 {
+	position:absolute;
+	width:570px;
+	height:273px;
+	z-index:2;
+	left: 275px;
+	top: 88px;
+}
+.STYLE1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+#Layer3 {
+	position:absolute;
+	width:576px;
+	height:44px;
+	z-index:3;
+	left: 266px;
+	top: 362px;
+}
+-->
+</style>
+</head>
+<body>
+    <div id="Layer1"><a href="index.php"><img src="../image/LOGO.jpg" width="151" height="60" /></a></div>
+<div id="Layer2">
+    
+      <?php
+        $user_name=$_SESSION['name'];
+
+        $sql="select * from user where Username='$user_name'";
+        $rs=mysql_query($sql);
+        while($obj=mysql_fetch_object($rs))
+        {
+
+
+
+    ?>
+<form action="../manage/DoUpadteUser.php?user_id=<?php echo $obj->user_id;?>" name="xiugaiyonghu" method="post" >
+  <table width="570" height="270" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="2"><div align="center" class="STYLE1">修改用户信息</div></td>
+    </tr>
+    <tr>
+      <td width="186">姓名：</td>
+      <td width="368"><input name="user_name" type="text" size="40"  value="<?php echo $_SESSION['name'];?>"/></td>
+    </tr>
+    <tr>
+      <td>电子邮件：</td>
+      <td><input name="user_email" type="text" size="40"  value="<?php echo $obj->Email_address;?>"/></td>
+    </tr>
+    <tr>
+      <td>邮政编码：</td>
+      <td><input name="user_postalcode" type="text" size="40" value="<?php echo $obj->user_postalcode;?>" /></td>
+    </tr>
+    <tr>
+      <td>街道地址：</td>
+      <td><input name="user_adders" type="text" size="40" value="<?php echo $obj->user_adders;?>"/></td>
+    </tr>
+    <tr>
+      <td>电话号码：</td>
+      <td><input name="user_tel" type="text" size="40" value="<?php echo $obj->Phone_num;?>" /></td>
+    </tr>
+    <tr>
+      <td>密码：</td>
+      <td><input name="user_password" type="password" size="40" value="<?php echo $obj->Password;?>"/></td>
+    </tr>
+    <tr>
+      <td>确认密码：</td>
+      <td><input name="user_password1" type="password" size="40"  value="<?php echo $obj->Password;?>"/></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+        <label>
+          <div align="right">
+            <input type="submit" name="Submit" value="确认修改" />
+        </div>
+        </label>
+         </td>
+    </tr>
+  </table>
+    <?php }?>
+      </form>
+</div>
+<div id="Layer3"><img src="../image/YEWEI.jpg" width="583" height="32" /></div>
+</body>
+</html>
+
+
+<?php    mysql_close($conn);?>

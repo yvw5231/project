@@ -1,0 +1,76 @@
+h1 {font-weight:bold; color:#E47911; font-size:medium; margin: 0 0 0 0;}
+h3 {font-weight:bold; font-size:small;}
+
+#doc { width: auto; padding-bottom:15px; margin:auto; text-align:left; width:100%;} 
+	 
+#hd {margin-bottom:10px;}
+#progressbar {margin:10px auto 20px auto; text-align:center;}
+
+#bd {text-align:center;}
+#wrapper {text-align:left;width:88.5%;margin:auto;}
+
+#shipmultiplebox {width:190px;padding:0 0 5px;margin-left:1.9em;border:1px solid #cccc99;text-align:center;float:right;}
+
+#shipmultiplebox div {padding:4px 10px 14px;font-weight:bold;}
+
+#instructionswrapper {overflow:hidden;padding-bottom:15px;}
+
+.deletebutton, .storedeletebutton {display:none;}
+.requestinput {display:none;}
+
+#existingaddresses, #existingstoreaddresses {overflow:hidden;min-width:600px;}
+
+.headerCell {margin-bottom:.5em;}
+
+form {display:inline;}
+
+.addressblockleft {float:left;width:48%;}
+.addressblockright {float:right;width:48%;}
+.addressblock {margin-left:4px;}
+.addressrow {clear:both;}
+
+.addressbuttons {padding-top:1.5em; margin-left:3px;}
+.editbutton {padding-right:.5em;}
+.greenspacer {height:1px;width:98%;}
+.spacercontainer {padding: 2em 0 1em;}
+
+#aponote {width:90%;margin:20px auto;overflow:hidden;}
+#aponote ul {margin:13px 0;padding-left:40px;}
+#aponote ul li {list-style-type:disc;}
+
+
+#ft {text-align:center;}
+#ft .gc-ft {border-top:1px solid black;border-bottom:1px solid black;padding:.5em;margin-bottom:1em;}
+
+.clear {clear:both;width:100%;height:1px;}
+.separator {clear:left;}
+
+.newaddress, .storesearch {text-align:left; margin-bottom:2em; width:49.1%;}
+.newaddress { float: left; }
+.storesearch { float: right; }
+.newintladdress {text-align:left; margin-bottom:2em; margin-left:2em;}
+.newaddressheading {margin-bottom:2em; margin-top:1em;}
+
+.newaddressestable {width:100%;cellspacing:0;cellpadding:4;border:0;align:center;}
+.newaddressestable td {vertical-align:text-top;}
+.newhomeaddress {width:50%;}
+
+#enterAddressFormTable {font-family:verdana,arial,helvetica,sans-serif;font-size:small;}
+#enterAddressFormTable td {padding:2px;}
+
+#newshippingaddressfields {margin-bottom:1em;margin-right:2em; margin-left:2em;}
+#newshippingactions {margin-left:3em;}
+#newintlshippingactions {margin-left:5em;}
+#addanotheraddressbutton{margin-top:8px;margin-bottom:4px;vertical-align:middle;}
+
+.storesearchtable {width:100%;cellspacing:2;cellpadding:2;}
+.storesearchtable td {margin:2px;padding:2px}
+.storesearchlabel {font-weight:bold;text-align:left;vertical-align:text-top;}
+.storecountrysearchlabel {font-weight:bold;text-align:right;vertical-align:text-top;}
+.storesearchinput {vertical-align:text-top;}
+.storesearchaction {margin-top:1em; margin-bottom:1.4em;}
+.storesearchinput div{margin-top:1.3em;}
+
+.inputexample {font-size:x-small;}
+.separatorRow {height:10px;}
+.requiredFieldWarning {color:#cc0000;}

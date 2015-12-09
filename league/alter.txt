@@ -1,0 +1,2 @@
+ALTER TABLE User ADD user_postalcode CHAR(5) DEFAULT '16803';
+ALTER TABLE user ADD user_adders CHAR(50) DEFAULT 'Penn State Univ';
