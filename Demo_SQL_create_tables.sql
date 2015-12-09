@@ -155,3 +155,23 @@ CREATE TABLE Item_type(
 	FOREIGN KEY(Category_id) REFERENCES Item (Category_id)
 );
 
+CREATE TABLE `ordercar` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `order_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `order_price` decimal(7,2) DEFAULT NULL,
+  `order_type` tinyint(1) DEFAULT '0',
+  `user_name` char(50) DEFAULT NULL,
+	PRIMARY KEY(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `order_information` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `item_id` int,
+  `order_num` int DEFAULT NULL,
+  `user_name` char(50) DEFAULT NULL,
+  `item_name` char(50) DEFAULT NULL,
+PRIMARY KEY(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

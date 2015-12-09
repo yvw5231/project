@@ -26,7 +26,7 @@ function addOrderInfomation($order_id,$ware_id,$order_num,$user_name,$ware_name)
        $sql="insert into order_information (order_id,item_id,order_num,user_name,item_name) values";
        $sql.="($order_id,$ware_id,$order_num,'$user_name','$ware_name')";
        $rs=execUpdate($sql);
-       //error_log($sql."WWWW", 3, "error.txt");;
+       error_log($sql."WWWW", 3, "error.txt");;
        return $rs;
 }
 

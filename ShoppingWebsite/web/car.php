@@ -1682,7 +1682,7 @@ if(@$_SESSION['name']=="") {
         ?>
                         <input type="hidden" name="Item_name<?php echo $m; ?>" value="<?php echo $caritem[$m]['Item_name']; ?>"/>
                         <input type="hidden" name="Price<?php echo $m; ?>" value="<?php echo $caritem[$m]['Price']; ?>" />
-                        <input type="hidden" name="Quantity<?php echo $m; ?>" value="<?php echo $caritem[$m]['Quantity']; ?>" />
+                        <input type="hidden" name="item_num<?php echo $m; ?>" value="<?php echo $caritem[$m][11]; ?>" />
                         <input type="hidden" name="Item_id<?php echo $m; ?>" value="<?php echo $caritem[$m]['Item_id']; ?>" />
                                 <?php
                             }

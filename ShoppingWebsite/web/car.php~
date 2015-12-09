@@ -1200,13 +1200,13 @@ if(@$_SESSION['name']=="") {
                                                                             <tbody><tr>  <td id="navSearchDropdown" width="105px">
                                                                                         <div id="hiddenSearchDropdown" width="auto">
 
-                                                                                            <select name="type_id"  title="搜索范围" style="min-width:105px;">
+                                                                                            <select name="Category_id"  title="搜索范围" style="min-width:105px;">
                                                                                                 <option value="all" selected="selected">全部分类</option>
 <?php
-                                                                                                $sql="select * from type";
+												$sql= "SELECT * FROM Category C where EXISTS (select * from Item I where C.Category_id = I.Category_id)";
                                                                                                 $rs=mysql_query($sql);
                                                                                                 while($type=mysql_fetch_object($rs)) {
-                                                                                                    echo "<option value=\"$type->type_id\">$type->type_sort</option>";
+                                                                                                    echo "<option value=\"$type->Category_id\">$type->Category_name</option>";
                                                                                                 }
                                                                                                 ?>
                                                                                             </select>
@@ -1682,7 +1682,7 @@ if(@$_SESSION['name']=="") {
         ?>
                         <input type="hidden" name="Item_name<?php echo $m; ?>" value="<?php echo $caritem[$m]['Item_name']; ?>"/>
                         <input type="hidden" name="Price<?php echo $m; ?>" value="<?php echo $caritem[$m]['Price']; ?>" />
-                        <input type="hidden" name="Quantity<?php echo $m; ?>" value="<?php echo $caritem[$m]['Quantity']; ?>" />
+                        <input type="hidden" name="item_num<?php echo $m; ?>" value="<?php echo $caritem[$m][11]; ?>" />
                         <input type="hidden" name="Item_id<?php echo $m; ?>" value="<?php echo $caritem[$m]['Item_id']; ?>" />
                                 <?php
                             }

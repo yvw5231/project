@@ -1,7 +1,7 @@
 <?php
 session_start();
-$conn=mysql_connect("localhost", "root", "","league")or die("数据库连接错误");
-mysql_select_db("shoppingwebsite") or die("数据库名字错误");
+$conn=mysql_connect("localhost", "root", "")or die("数据库连接错误");
+mysql_select_db("league") or die("数据库名字错误");
 ?>
 
 
